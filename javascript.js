@@ -1,18 +1,16 @@
-function getComputerChoice(max) {
-  const random = Math.floor((Math.random() * max) + 1);
+function getComputerChoice() {
+  const random = Math.floor((Math.random() * 3));
   if (random === 0) return "rock";
   if (random === 1) return "paper";
   return "scissors";
 }
 
 function getHumanChoice() {
-  const input = prompt("Enter your Input: ");
+  const input = window.prompt("Enter your Input: ");
   return input.toLowerCase();
 }
 
-function playRound(getHumanChoice, getComputerChoice) {
-  const human = getHumanChoice();
-  const computer = getComputerChoice();
+function playRound(human, computer) {
 
   console.log(`You chose: ${human}`);
   console.log(`Computer chose: ${computer}`);
@@ -61,4 +59,6 @@ function PlayGame() {
     console.log("🤝 It's a tie!");
   }
 }
+
+PlayGame();
 
